@@ -81,11 +81,11 @@ Created by https://www.toptal.com/developers/gitignore/api/java,intellij,visuals
 
 # .idea/modules.xml
 
-# .idea/*.iml
+.idea/*.iml
 
 # .idea/modules
 
-# *.iml
+*.iml
 
 # *.ipr
 
@@ -169,7 +169,7 @@ fabric.properties
 
 
 
-# *.iml
+*.iml
 
 # modules.xml
 
