@@ -34,6 +34,8 @@ public class ActividadSwitchCalculadora {
                 System.out.print("Ingresa el segundo número: ");
                 variableB = sc.nextDouble();
 
+                System.out.println("Valores ingresados: A = " + variableA + ", B = " + variableB);
+
                 resultado = variableA + variableB;
                 System.out.println("Resultado: " + resultado);
                 break;
@@ -45,6 +47,8 @@ public class ActividadSwitchCalculadora {
                 System.out.print("Ingresa el segundo número: ");
                 variableB = sc.nextDouble();
 
+                System.out.println("Valores ingresados: A = " + variableA + ", B = " + variableB);
+
                 resultado = variableA - variableB;
                 System.out.println("Resultado: " + resultado);
                 break;
@@ -55,6 +59,8 @@ public class ActividadSwitchCalculadora {
                 variableA = sc.nextDouble();
                 System.out.print("Ingresa el segundo número: ");
                 variableB = sc.nextDouble();
+
+                System.out.println("Valores ingresados: A = " + variableA + ", B = " + variableB);
 
                 resultado = variableA * variableB;
                 System.out.println("Resultado: " + resultado);
@@ -70,6 +76,8 @@ public class ActividadSwitchCalculadora {
                 if (variableB == 0) {
                     System.out.println("No se puede dividir entre cero");
                 } else {
+                    System.out.println("Valores ingresados: A = " + variableA + ", B = " + variableB);
+
                     resultado = variableA / variableB;
                     System.out.println("Resultado: " + resultado);
                 }
