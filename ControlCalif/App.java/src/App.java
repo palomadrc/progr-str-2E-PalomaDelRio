@@ -32,7 +32,7 @@ public class App {
             System.out.print(msg);
             texto = sc.nextLine().trim();
             if (texto.isEmpty()) {
-                System.out.println("Error: no puede estar vacío.");
+                System.out.println("X: Debe ingresar los datos");
             }
         } while (texto.isEmpty());
         return texto;
@@ -49,10 +49,10 @@ public class App {
                 if (valor >= min && valor <= max) {
                     valido = true;
                 } else {
-                    System.out.println("Debe estar entre " + min + " y " + max);
+                    System.out.println("X: Debe ser un NÚMERO de entre " + min + " y " + max);
                 }
             } else {
-                System.out.println("Error: ingresa un número.");
+                System.out.println("X: Debe ingresar un NÚMERO VALIDO");
                 sc.next();
             }
         }
@@ -70,10 +70,10 @@ public class App {
                 if (valor >= min && valor <= max) {
                     valido = true;
                 } else {
-                    System.out.println("Debe estar entre " + min + " y " + max);
+                    System.out.println("X: Debe estar entre " + min + " y " + max);
                 }
             } else {
-                System.out.println("Error: ingresa un número entero.");
+                System.out.println("X: Solo se aceptan números enteros");
                 sc.next();
             }
         }
@@ -86,7 +86,7 @@ public class App {
             if (sc.hasNextBoolean()) {
                 return sc.nextBoolean();
             } else {
-                System.out.println("Error: escribe true o false.");
+                System.out.println("X: Debe ingresar solamente - true o false -");
                 sc.next();
             }
         }

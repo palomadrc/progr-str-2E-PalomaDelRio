@@ -11,17 +11,17 @@ public class GradeService {
     public String determinarEstado(double finalCalif, int asistencia, boolean entregoProyecto) {
 
         if (asistencia < 80) {
-            return "REPROBADO por ASISTENCIA";
+            return "REPROBADO por Asistencia";
         }
 
         if (!entregoProyecto) {
-            return "REPROBADO por PROYECTO";
+            return "REPROBADO por Proyecto";
         }
 
         if (finalCalif >= 70) {
             return "APROBADO";
         } else {
-            return "REPROBADO por CALIFICACIÓN";
+            return "REPROBADO por Calificaión";
         }
     }
 }
