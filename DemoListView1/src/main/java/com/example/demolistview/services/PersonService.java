@@ -25,10 +25,42 @@ public class PersonService {
                 String email= parts[1];
                 int edad= Integer.parseInt(parts[2]);
 
-                result.add("Nombre:"+name+"-"+email+"-"+edad);
+                result.add(name+"-"+email+"-"+edad);
             }
             return result;
 
+        }
+
+        public void updatePerson(int index, String name, String email, int edad) throws IOException {
+            validate(name, email, edad);
+            if (index<0){
+                throw new IllegalArgumentException("El indice es inválido");
+            }
+            List<String> data=getCleanLines();
+            data.set(index,name+","+email+","+edad);
+            repo.saveFile(data);
+        }
+
+        //leer solo lineas con informacion(no vacias) limpiar la lista
+        private List<String> getCleanLines() throws IOException {
+            List<String> lines= repo.readAllLines();
+            List<String> cleanLines = new ArrayList<>();
+            for (String line : lines){
+                if (line!=null && !line.isBlank()){
+                    cleanLines.add(line);
+                }
+            }
+            return cleanLines;
+        }
+
+        public void deletePerson(int index,String name, String email, int edad) throws IOException {
+
+            List<String> data = getCleanLines();
+             if(index < 0 || index >= data.size()){
+                 throw new IllegalArgumentException("Indice incorrecto");
+             }
+             data.remove(index);
+             repo.saveFile(data);
         }
 
         public void addPerson(String name, String email, int edad) throws IOException {

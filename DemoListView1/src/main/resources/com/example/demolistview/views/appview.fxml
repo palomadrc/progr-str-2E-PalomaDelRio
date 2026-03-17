@@ -29,6 +29,8 @@
          <children>
             <Button mnemonicParsing="false" onAction="#onReload" text="Recargar" />
             <Button mnemonicParsing="false" onAction="#onAdd" text="Agregar" />
+            <Button mnemonicParsing="false" onAction="#onUpdate" text="Actualizar" />
+            <Button mnemonicParsing="false" onAction="#onDelete" text="Borrar" />
          </children>
       </HBox>
       <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" />
